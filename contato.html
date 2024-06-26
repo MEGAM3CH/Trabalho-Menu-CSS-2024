@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<title>Contato</title>
+		<meta charset="UTF-8">
+		<meta name="viemport" content="width=device-width, inicial-scale1">
+		<link rel="icon" type="image/jpg" href="img1/contato.png">
+		<link rel= "stylesheet" type="text/css" href="menu1.css">
+		<script language="javascript" type="text/javascript">
+		function validar() {
+    	var nome_prop = contato.nome_prop.value;
+    	var email = contato.email.value;
+    	var data_nas = contato.data_nas.value;
+
+    	var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    	var dateRegex = /^\d{2}-\d{2}-\d{4}$/;
+    	var nameRegex = /^[a-zA-Z\s]+$/;
+
+    		if (nome_prop == "nome_prop") {
+        		alert("Preencha o campo com seu nome");
+       			contato.nome_prop.focus;
+        		return false;
+    			}
+
+    		if (!nameRegex.test(nome_prop)) {
+       			alert("Por favor, insira um nome válido (ex: Renatão)");
+       			contato.nome_prop.focus;
+        		return false;
+    			}
+
+    		if (!emailRegex.test(email)) {
+        		alert("Por favor, insira um e-mail válido (ex: sarapatel123@lolmail.com)");
+        		contato.email.focus;
+       			return false;
+    			}
+
+    		if (data_nas == "data_nas") {
+        		alert("Preencha o campo com sua Data de Nascimento");
+        		contato.data_nas.focus;
+       			return false;
+   				}
+
+   			 if (!dateRegex.test(data_nas)) {
+       		 	alert("Por favor, insira uma data válida no formato DD-MM-AAAA");
+       			contato.data_nas.focus;
+       	 		return false;
+    			}
+
+    			contato.nome_prop.value = "";
+    			contato.email.value = "";
+   				contato.data_nas.value = "";
+
+   				return true;
+				}
+		</script>
+	</head>
+	<body>
+		<div id="all">
+			<ul class="menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="historia.html">História</a></li>
+				<li><a href="receita.html">Receita</a></li>
+				<li><a href="curiosidades.html">Curiosidades</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			</ul>
+		</div>
+	</body>
+	<body>
+		<br><hr><br><br><h2><center>Comentários e contato</h2></center><br><hr>
+		<br><br><br>
+		<center><h3><form name="contato" method="post" onsubmit="return validar()">
+						Nome Completo:<input name="nome_prop" type="text"><br><br>
+						Email: <input name="email" type="text"><br><br>
+						Data de Nascimento:<input type="date" name="data_nas" id="data_nas"><br><br>
+					<h2><b>Deixe seu comentário!</b></h2>
+					<textarea cols="70" rows="7" name="comentario" placeholder="Coloque aqui a sua observação"></textarea><br>
+					<input type="submit" value="ENVIAR">&nbsp;&nbsp;<input type="reset" name="limpa" value="LIMPAR">
+					</form></h3><br>
+		</center>
+		<br><br><hr>
+		<br><center class="footer"><h5>Pedro Valieri <b>2024</b> - &copyTodos os direitos reservados<br>
+			Trabalho Acadêmico - sem fins lucrativos</h5></center>
+			<a href="#" align="right"><h6>Topo</h6></a>
+    		<a id="topo"></a>
+	</body>
+</html>

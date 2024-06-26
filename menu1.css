@@ -1,0 +1,46 @@
+*{
+	margin: 0px;
+	padding: 0cap;
+}
+
+body{	font-family: "Arial";
+		background-color: rgb(245, 219, 135);
+}
+
+a{ text-decoration: none; /* tira siblinhado do link */
+	color: #000;
+	text-transform: uppercase; /* transforma texto do link em maiúsculo */
+}
+
+a:hover{
+	background-color: chocolate;
+ }
+
+#all{
+			width: 780px;
+			height: 80px;
+			line-height: 80px; /* centraliza na vertical */
+			background-color: rgb(255, 176, 31);
+			border: 3px dashed 3ccc;
+			margin: 0 auto;
+    }
+ul.menu{
+			text-align: center; /* centraliza na horizontal */
+}
+ul.menu li{
+			display: inline-block; /* centraliza na vertical */
+			margin: 0px 5px;
+}
+
+ul.menu li a{
+			background-color: rgb(197, 0, 0);
+			border-radius: 6px; /* bordas arredondadas*/
+			padding: 6px 10px;
+			color: #fff;
+}
+ul.menu li a:hover{
+			background-color: darkred;
+}
+
+textarea{resize: none;
+}
